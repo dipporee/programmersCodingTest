@@ -17,8 +17,12 @@ public class 대소문자_바꿔서_출력하기 {
 		  	
 		 
 		 결론 : 
-		 	1. 사용한 함수 외워야 함.
-		 	2. 정규식을 알아야 함.
+		 	1. Character.isUpperCase() // 대문자 확인
+		 	2. Character.isLowerCase() // 소문자 확인
+		 	3. item.toLowerCase() // 소문자 변환
+		 	4. item.toUpperCase() // 대문자 변환
+		 	5. item.charAt(0) // String -> char 로 변환
+		 	6. 정규식을 알아야 함.
 		 */
 		
         Scanner sc = new Scanner(System.in);
