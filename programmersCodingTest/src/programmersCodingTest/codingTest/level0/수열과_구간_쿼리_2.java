@@ -3,27 +3,33 @@ package programmersCodingTest.codingTest.level0;
 public class 수열과_구간_쿼리_2 {
 	
     public static int[] solution(int[] arr, int[][] queries) {
-        int[] answer = new int[queries.length - 1];
+        int[] answer = new int[queries.length];
         
         for (int j = 0; j < queries.length; j++) {
-            int[] temp = {};
+        	String temp = "";
             for (int i = 0; i < arr.length; i++) {            
-                if (queries[i][0] <= arr[i] ) {
-                	temp = new int[temp.length + 1];
-                    temp[temp.length] = arr[i];
+                if (queries[j][0] <= arr[i] && arr[i] >= queries[j][1]) {
+                	temp += "," + arr[i];
+                } else {
+                	temp += -1;
                 }
             }   
             
-            int min = temp[0]; //최소값
-            for (int num : temp) {
-                if (min > num) {
-                    min = num;
+            int min = -1;
+            if (!temp.equals("-1")) {
+            	temp = temp.substring(1);
+                String[] arrStr = temp.split(","); 
+                
+                min = Integer.parseInt(arrStr[0]); //최소값
+                for (String str : arrStr) {
+                	int num = Integer.parseInt(str);
+                    if (min > num) {
+                        min = num;
+                    }
                 }
-            }
+            } 
             
-            //temp = new int[temp.length + 1];
-            answer[answer.length] = min;
-            
+            answer[j] = min;                        
         }
         
         return answer;
