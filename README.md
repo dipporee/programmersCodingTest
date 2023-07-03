@@ -29,6 +29,8 @@ https://school.programmers.co.kr/learn/challenges?order=recent&levels=5%2C0
 2023.06.23. 수열과 구간 쿼리 2   
 2023.06.23. 원소들의 곱과 합   
 2023.07.03. 카운트 업   
+2023.07.03. 간단한 논리 연산   
+2023.07.03. 9로 나눈 나머지   
 
 
 
